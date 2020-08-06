@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 136 136">
+	<defs>
+		<style>
+			.cls-1{fill:#c54c8c;}.cls-2{fill:#1171b9;}.cls-3{fill:#931859;}.cls-4{fill:#194181;}.cls-5{fill:#fff;}
+		</style>
+	</defs>
+	<title>
+		Asset 7
+	</title>
+	<g id="Layer_2" data-name="Layer 2">
+		<g id="Columns">
+			<polygon class="cls-1" points="104.13 0 33.47 136 0 136 0 0 104.13 0" />
+			<polygon class="cls-2" points="136 0 136 136 33.47 136 104.13 0 136 0" />
+			<polyline class="cls-3" points="29.75 64.55 55.78 92.97 35.59 131.75 17.53 118.47 17.53 64.55" />
+			<polyline class="cls-3" points="58.97 34.27 77.03 52.59 58.97 86.59 46.75 88.19 46.75 34.27" />
+			<polyline class="cls-4" points="35.59 131.75 41.44 136 136 136 136 51.53 116.88 30.28 104.66 77.03 87.66 60.56 84.47 60.56 77.03 52.59" />
+			<rect class="cls-5" x="17.52" y="64.23" width="12.24" height="54.24" />
+			<rect class="cls-5" x="46.57" y="34.46" width="12.24" height="84.01" />
+			<rect class="cls-5" x="75.61" y="60.5" width="12.24" height="57.97" />
+			<rect class="cls-5" x="104.65" y="29.95" width="12.24" height="88.52" />
+		</g>
+	</g>
+</svg>

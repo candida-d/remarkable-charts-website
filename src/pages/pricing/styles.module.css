@@ -1,0 +1,146 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.cardGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 32px;
+}
+
+@media (min-width: 800px) {
+  .cardGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.card {
+  flex: 1 1 0px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-sizing: border-box;
+  flex: 1;
+  margin: 0.5em;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 40px rgba(14, 30, 37, 0.16);
+  color: rgba(14, 30, 37, 0.8);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-size: 1rem;
+  max-width: 23.224em;
+  padding: 1.618em;
+  position: relative;
+  text-align: left;
+  text-shadow: none;
+  z-index: 10;
+}
+
+.badge {
+  background: #00ad9f;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1rem;
+  padding: 0 0.382em;
+  position: relative;
+  top: -0.1rem;
+  vertical-align: middle;
+  margin: 0 auto 0;
+}
+
+.tier3 {
+  background: #9b00f5;
+}
+
+.tier2 {
+  background: #0051c1;
+}
+
+.tier1 {
+  background: #00ad9f;
+}
+
+.description {
+  color: rgba(14, 30, 37, 0.54);
+}
+
+.price {
+  color: #0e1e25;
+  font-size: 2.618em;
+  font-weight: 500;
+  margin: 0.146em 0 0;
+}
+
+.small {
+  color: rgba(14, 30, 37, 0.38);
+  font-size: 0.5em;
+  font-weight: 400;
+}
+
+.button {
+  margin-top: 2em;
+  color: #fff;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 2px 4px 0 rgba(14, 30, 37, 0.12);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.618em;
+  outline: 0;
+  padding: 0.382em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  transition: all 0.15s ease;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  padding-left: 1.618em;
+  position: relative;
+  text-align: left;
+}
+
+.item:before {
+  background-color: #00ad9f;
+  border-radius: 50%;
+  color: #fff;
+  content: "✓";
+  display: block;
+  font-size: 0.618em;
+  font-weight: 900;
+  height: 1.618em;
+  left: 0;
+  line-height: 1.75;
+  position: absolute;
+  text-align: center;
+  top: 0.382em;
+  width: 1.618em;
+}
+
+.footer {
+  margin-top: auto;
+}

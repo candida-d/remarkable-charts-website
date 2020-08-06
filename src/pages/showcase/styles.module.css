@@ -1,0 +1,17 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.showcaseUser {
+  height: 100%;
+}
+
+.chartContainer {
+  width: 80vw;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 768px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px 0px;
+}

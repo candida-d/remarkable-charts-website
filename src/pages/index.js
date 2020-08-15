@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
 import classnames from "classnames";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Modal } from "@fluentui/react";
@@ -16,7 +15,8 @@ import {
   savePngToFile,
   saveSvgToFile,
 } from "@mulberryhousesoftware/remarkable-charts-ui";
-import NoSsr from "../components/NoSsr";
+import { Hero } from "../components/Hero";
+import { ValueProp } from "../components/ValueProp";
 import styles from "./styles.module.css";
 
 initializeIcons(undefined, { disableWarning: true });
@@ -184,33 +184,15 @@ function Feature({ imageUrl, title, description }) {
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
+
   return (
     <Layout
       title={`Create beautiful charts in seconds with Excel`}
       description="Create beautiful charts in seconds with Excel"
     >
-      <header className={classnames("hero hero--dark", styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.tagline}</h1>
-          <div className={styles.buttons}>
-            <Link
-              className={styles.indexCtasGetStartedButton}
-              to={useBaseUrl("docs/installing")}
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </header>
-      <div className={classnames(styles.announcement, styles.announcementDark)}>
-        <div className={styles.announcementInner}>
-          <div className={styles.chartContainer}>
-            <NoSsr>
-              <RemarkableChart style={{ height: "100%" }} />
-            </NoSsr>
-          </div>
-        </div>
-      </div>
+      <Hero tagline={siteConfig.tagline} />
+      <hr className={styles.separator} />
+      <ValueProp />
       <main>
         {features && features.length && (
           <section className={classnames("text--center", styles.features)}>

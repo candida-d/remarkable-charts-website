@@ -14,7 +14,7 @@
 
 .title {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
@@ -44,6 +44,7 @@
     text-align: left;
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+    margin: 0px 5%;
   }
 
   .meta {
@@ -69,5 +70,23 @@
     display: block;
     width: 50%;
     padding-bottom: 28.125%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    margin: 0px 11%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .wrapper {
+    margin: 0px 17%;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .wrapper {
+    margin: 0px 22%;
   }
 }

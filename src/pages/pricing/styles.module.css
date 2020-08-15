@@ -3,144 +3,261 @@
  * and scoped locally.
  */
 
-.cardGrid {
+.pricingHeader {
+  text-align: center;
   display: flex;
   flex-direction: column;
+  -webkit-box-align: center;
   align-items: center;
-  width: 100%;
-  margin: 0 32px;
+  padding: 3rem 20px;
 }
 
-@media (min-width: 800px) {
-  .cardGrid {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-  }
-}
-
-.card {
-  flex: 1 1 0px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 2px 4px 0 rgba(14, 30, 37, 0.12);
-  box-sizing: border-box;
-  flex: 1;
-  margin: 0.5em;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 40px rgba(14, 30, 37, 0.16);
-  color: rgba(14, 30, 37, 0.8);
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  font-size: 1rem;
-  max-width: 23.224em;
-  padding: 1.618em;
-  position: relative;
-  text-align: left;
-  text-shadow: none;
-  z-index: 10;
-}
-
-.badge {
-  background: #00ad9f;
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  font-size: 0.8rem;
+.title {
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1rem;
-  padding: 0 0.382em;
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ifm-font-color-secondary);
+}
+
+.planWrapper {
+  padding: 0px 20px;
+}
+
+.planInner {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
-  top: -0.1rem;
-  vertical-align: middle;
-  margin: 0 auto 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
 }
 
-.tier3 {
-  background: #9b00f5;
+.planPrice {
+  flex: 0 0 100%;
 }
 
-.tier2 {
-  background: #0051c1;
+.planDetailsWrapper {
+  flex: 0 0 100%;
 }
 
-.tier1 {
-  background: #00ad9f;
-}
-
-.description {
-  color: rgba(14, 30, 37, 0.54);
+.planName {
+  color: rgb(55, 213, 211);
+  display: block;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 13px;
 }
 
 .price {
-  color: #0e1e25;
-  font-size: 2.618em;
-  font-weight: 500;
-  margin: 0.146em 0 0;
+  line-height: 1;
+  padding: 1rem 0px;
 }
 
-.small {
-  color: rgba(14, 30, 37, 0.38);
-  font-size: 0.5em;
-  font-weight: 400;
+.numeral {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.button {
-  margin-top: 2em;
-  color: #fff;
-  width: 100%;
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1),
-    0 2px 4px 0 rgba(14, 30, 37, 0.12);
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.618em;
-  outline: 0;
-  padding: 0.382em 1em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: none;
-  transition: all 0.15s ease;
-  vertical-align: middle;
-  z-index: 1;
+.planDesc {
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
-.list {
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.planSubtext {
+  font-size: 14px;
+}
+
+.trialButton {
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+
+.planDetails {
+  padding-left: 0px;
   list-style: none;
-  padding: 0;
+  margin: 0px;
 }
 
-.item {
-  padding-left: 1.618em;
-  position: relative;
-  text-align: left;
+.pricingPlanDetails {
+  padding-left: 0px;
+  list-style: none;
+  margin: 0px;
 }
 
-.item:before {
-  background-color: #00ad9f;
-  border-radius: 50%;
-  color: #fff;
-  content: "✓";
-  display: block;
-  font-size: 0.618em;
-  font-weight: 900;
-  height: 1.618em;
-  left: 0;
+.pricesDesc {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
   line-height: 1.75;
-  position: absolute;
-  text-align: center;
-  top: 0.382em;
-  width: 1.618em;
+  padding: 0px;
 }
 
-.footer {
-  margin-top: auto;
+.checkIcon {
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  background: rgb(102, 191, 60);
+  border-radius: 100%;
+}
+
+.separator {
+  margin: 0;
+  border-style: solid none none;
+  border-top: 1px solid;
+  border-top-color: rgba(128, 128, 128, 0.2);
+}
+
+.pricesWrapper {
+  padding: 3rem 20px;
+}
+
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.plan {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  flex: 0 0 100%;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.planDetails {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 2rem;
+    line-height: 36px;
+    margin-bottom: 0.75rem;
+  }
+
+  .desc {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .planPrice {
+    flex: 1 1 0%;
+    padding-right: 20px;
+    border-right: 1px solid rgba(128, 128, 128, 0.2);
+  }
+
+  .planDetailsWrapper {
+    flex: 1 1 0%;
+  }
+
+  .planDetails {
+    line-height: 1.25;
+    padding: 0.5rem 0px;
+  }
+
+  .detail {
+    display: flex;
+    align-items: center;
+    line-height: 1.75;
+    padding: 0px;
+  }
+
+  .action {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pricesWrapper {
+    margin: 0px 5%;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .schedule {
+    padding-bottom: 3rem;
+  }
+
+  .plan {
+    margin-bottom: 0px;
+    padding-bottom: 3rem;
+    flex: 0 0 45%;
+    border-bottom: none;
+  }
+
+  .pricesDesc {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 3rem;
+  }
+
+  .trialButton {
+    margin-bottom: 1rem;
+  }
+
+  .planDetails {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 800px) {
+  .planInner {
+    margin-bottom: 10vh;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(128, 128, 128, 0.2);
+    border-image: initial;
+    border-radius: 5px;
+    padding: 48px 60px;
+  }
+
+  .planDetails {
+    padding-left: 60px;
+  }
+
+  .plan {
+    padding-bottom: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    flex: 0 1 33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pricesWrapper {
+    margin: 0px 11%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .pricesWrapper {
+    margin: 0px 17%;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .pricesWrapper {
+    margin: 0px 22%;
+  }
 }

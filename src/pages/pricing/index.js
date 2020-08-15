@@ -5,77 +5,132 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
 
-const Card = ({
-  tier,
-  name,
-  price,
-  info = null,
-  description,
-  features,
-  buttonText,
-}) => (
-  <section className={styles.card}>
-    <header>
-      <h3 className={classnames(styles.badge, styles[tier])}>{name}</h3>
-      {info && <span>{info}</span>}
-      <p className={styles.price}>
-        {price}
-        <small className={styles.small}>/month</small>
-      </p>
-      <p className={styles.description}>{description}</p>
-    </header>
-    <ul className={styles.list}>
-      {features.map((d) => (
-        <li className={classnames(styles.item)}>{d}</li>
-      ))}
-    </ul>
-    <footer className={styles.footer}>
-      <Link to="/" className={classnames(styles.button, styles[tier])}>
-        {buttonText}
-      </Link>
-    </footer>
-  </section>
+const CheckIcon = ({ className }) => (
+  <svg className={className} viewBox="0 0 1024 1024" width="20px" height="20px">
+    <path
+      d="M948.598 199.75c-15.622-15.618-40.95-15.618-56.57 0l-535.644 535.644-224.060-224.062c-15.624-15.624-40.954-15.62-56.57 0-15.624 15.62-15.624 40.948 0 56.568l251.574 251.574c0.252 0.266 0.472 0.55 0.734 0.812 7.82 7.82 18.072 11.724 28.322 11.714 10.25 0.010 20.502-3.894 28.322-11.714 0.248-0.248 0.456-0.518 0.698-0.77l563.196-563.202c15.618-15.618 15.618-40.94-0.002-56.564z"
+      fill="currentcolor"
+    ></path>
+  </svg>
 );
 
 function Pricing() {
   return (
     <Layout title={`Pricing`} description="Pricing">
-      <div className="container margin-vert--lg">
-        <div className="text--center">
+      <div>
+        <div className={classnames("text--center", styles.pricingHeader)}>
           <h1>Pricing</h1>
+          <div className={styles.desc}>Made for every team size</div>
         </div>
-        <div className="text--center row">
-          <div className={styles.cardGrid}>
-            <Card
-              tier="tier1"
-              name="Starter"
-              price="$0"
-              description="Great for getting started and viewing charts from anyone else"
-              features={[
-                "Bar and column charts",
-                <>
-                  Access to <Link to="/docs">documentation</Link>
-                </>,
-              ]}
-              buttonText="Get started for free"
-            />
-            <Card
-              tier="tier2"
-              name="Pro"
-              price="$5"
-              description="For frequent users who want access to everything. Starter features plus."
-              features={["All chart types"]}
-              buttonText="Get started"
-            />
-            <Card
-              tier="tier3"
-              name="Business"
-              info="starting at"
-              price="$100"
-              description="For large teams and companies. Pro features plus."
-              features={["Premium support"]}
-              buttonText="Contact sales"
-            />
+        <div className={styles.planWrapper}>
+          <div className={styles.planInner}>
+            <div className={styles.planPrice}>
+              <span className={styles.planName}>Essentials</span>
+              <div className={styles.price}>
+                <span className={styles.numeral}>Free</span>
+              </div>
+              <div className={styles.planDesc}>
+                Create basic charts and view any chart made by a colleague
+              </div>
+              <div className={styles.action}>
+                <Link
+                  className={classnames(
+                    "button button--primary",
+                    styles.trialButton
+                  )}
+                  to={useBaseUrl("docs/installing")}
+                >
+                  Get started now
+                </Link>
+                <div className={styles.planSubtext}>
+                  No credit card required - Setup in 5 minutes
+                </div>
+              </div>
+            </div>
+            <div className={styles.planDetailsWrapper}>
+              <ul className={styles.planDetails}>
+                <li className={styles.detail}>
+                  <CheckIcon className={styles.checkIcon} />
+                  Create bar and column charts
+                </li>
+                <li className={styles.detail}>
+                  <CheckIcon className={styles.checkIcon} />
+                  Access to documentation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr className={styles.separator} />
+        <div className={styles.pricesWrapper}>
+          <h2 className={styles.title}>Premium plans</h2>
+          <div className={styles.pricesDesc}>
+            Upgrade to access more charts types and additional features
+          </div>
+          <div className={styles.schedule}>
+            <div className={styles.plan}>
+              <span className={styles.planName}>Standard</span>
+              <div className={styles.price}>
+                <span className={styles.numeral}>$5</span>
+                <span className={styles.period}>/mo</span>
+              </div>
+              <div className={styles.planDesc}>
+                Professionals working with charts regularly
+              </div>
+              <Link
+                className={classnames(
+                  "button button--primary",
+                  styles.trialButton
+                )}
+                to={useBaseUrl("docs/installing")}
+              >
+                Try for free
+              </Link>
+              <ul className={styles.pricingPlanDetails}>
+                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>+ Core features</li>
+              </ul>
+            </div>
+            <div className={styles.plan}>
+              <span className={styles.planName}>Enterprise</span>
+              <div className={styles.price}>
+                <span className={styles.numeral}>Custom</span>
+              </div>
+              <div className={styles.planDesc}>Team and site licenses</div>
+              <Link
+                className={classnames(
+                  "button button--outline button--primary",
+                  styles.trialButton
+                )}
+                to={useBaseUrl("docs/installing")}
+              >
+                Chat with us
+              </Link>
+              <ul className={styles.pricingPlanDetails}>
+                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>+ Core features</li>
+              </ul>
+            </div>
+            <div className={styles.plan}>
+              <span className={styles.planName}>Bespoke</span>
+              <div className={styles.price}>
+                <span className={styles.numeral}>Custom</span>
+              </div>
+              <div className={styles.planDesc}>New custom chart types</div>
+              <Link
+                className={classnames(
+                  "button button--outline button--primary",
+                  styles.trialButton
+                )}
+                to={useBaseUrl("docs/installing")}
+              >
+                Chat with us
+              </Link>
+              <ul className={styles.pricingPlanDetails}>
+                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>+ Core features</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -1,25 +1,70 @@
 import React from "react";
 import classnames from "classnames";
-import Image from "@theme/IdealImage";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import { initializeIcons } from "@uifabric/icons";
+import { DataFrame } from "@mulberryhousesoftware/remarkable-charts-ui";
+import { Chart } from "../../components/Chart";
 import styles from "./styles.module.css";
 import examples from "../../data/examples";
+import sampleData from "../../data/sampleData.json";
 
-function Example({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div className={classnames("col col--4", styles.example)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.exampleImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
+initializeIcons(undefined, { disableWarning: true });
+
+function getData(dataset) {
+  const sampleDataSet = sampleData[dataset];
+
+  return {
+    data: DataFrame.parseJSON(
+      JSON.stringify(
+        new DataFrame(
+          sampleDataSet.data.slice(1),
+          sampleDataSet.columns,
+          sampleDataSet.dtypes,
+          sampleDataSet.format
+        )
+      )
+    ),
+    header: {
+      title: { content: sampleDataSet.title ?? "", align: "left" },
+      subtitle: {
+        content: sampleDataSet.subtitle ?? "",
+        align: "left",
+      },
+    },
+    footer: {
+      source: { content: sampleDataSet.source ?? "", align: "left" },
+    },
+    axisLeft: {
+      enabled: true,
+      title: "",
+      align: "center",
+      isLog: false,
+      min: null,
+      max: null,
+    },
+    axisBottom: {
+      enabled: true,
+      title: "",
+      align: "center",
+      reversed: false,
+    },
+    enableGridX: sampleDataSet.enableGridX ?? true,
+    enableGridY: true,
+    chartType: sampleDataSet.chartType,
+    options: { enableLabel: false, enableAxis: false, enableDataPoints: false },
+    legend: {
+      position: sampleDataSet.legend ?? "top",
+      align: "left",
+    },
+    insights: { enableMinMax: false },
+    annotations: sampleDataSet.annotations || [],
+    editMode: { type: "edit" },
+    transpose: false,
+    scheme: sampleDataSet.scheme ?? "google_standard",
+    aspectRatio: 1,
+    colorBy: "column",
+    filterColumns: sampleDataSet.columns.map((d) => true),
+  };
 }
 
 function Showcase() {
@@ -35,10 +80,12 @@ function Showcase() {
         </div>
         <div className="row">
           {examples.map((example) => (
-            <div key={example.title} className="col col--4 margin-bottom--lg">
+            <div key={example.title} className="col col--6 margin-bottom--lg">
               <div className={classnames("card", styles.showcaseUser)}>
                 <div className="card__image">
-                  <Image img={example.preview} alt={example.title} />
+                  <div className={styles.chartWrapper}>
+                    <Chart newState={getData(example.dataset)} />
+                  </div>
                 </div>
                 <div className="card__body">
                   <div className="avatar">
@@ -53,17 +100,9 @@ function Showcase() {
                 {(example.website || example.source) && (
                   <div className="card__footer">
                     <div className="button-group button-group--block">
-                      {example.website && (
-                        <Link
-                          className="button button--small button--secondary button--block"
-                          to={example.website}
-                        >
-                          Live demo
-                        </Link>
-                      )}
                       {example.source && (
                         <a
-                          className="button button--small button--secondary button--block"
+                          className="button disabled button--small button--primary button--block"
                           href={example.source}
                           target="_blank"
                           rel="noreferrer noopener"

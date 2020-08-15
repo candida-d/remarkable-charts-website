@@ -85,9 +85,11 @@ function onSave({ layout, state }, type = "svg", platform = "OfficeOnline") {
   }
 }
 
-export function Chart() {
+export function Chart({ newState }) {
   const [hideDialog, setHideDialog] = useState(true);
-  const [state, dispatch] = useStateReducer(defaultReducer);
+  const [state, dispatch] = useStateReducer(defaultReducer, {
+    chart: newState,
+  });
 
   return (
     <NoSsr>
@@ -95,7 +97,7 @@ export function Chart() {
         <StateDispatch dispatch={dispatch}>
           <Content
             state={state}
-            onTriggerPopup={(type) => {
+            onTriggerPopup={() => {
               setHideDialog(false);
             }}
             onSave={onSave}

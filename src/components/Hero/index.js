@@ -36,7 +36,7 @@ export function Hero({ tagline }) {
             className={classnames("button button--primary", styles.button)}
             to={useBaseUrl("docs/installing")}
           >
-            Get Started
+            Get started
           </Link>
           <button
             className={classnames("button button--primary", styles.button)}

@@ -3,6 +3,7 @@ import classnames from "classnames";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import { CTA } from "../../components/CTA";
 import styles from "./styles.module.css";
 
 const CheckIcon = ({ className }) => (
@@ -142,6 +143,21 @@ function Pricing() {
           </div>
         </div>
       </div>
+      <CTA
+        text={
+          <span>
+            Remarkable Charts is quick to install and it’s easy to get started.
+          </span>
+        }
+        action={
+          <Link
+            className={classnames("button button--primary", styles.button)}
+            to={useBaseUrl("docs/installing")}
+          >
+            Get started
+          </Link>
+        }
+      />
     </Layout>
   );
 }

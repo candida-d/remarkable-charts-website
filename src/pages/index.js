@@ -2,59 +2,18 @@ import React from "react";
 import classnames from "classnames";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { initializeIcons } from "@uifabric/icons";
 import { Hero } from "../components/Hero";
 import { ValueProp } from "../components/ValueProp";
 import { BenefitItem } from "../components/BenefitItem";
 import { BenefitList } from "../components/BenefitList";
+import { CTA } from "../components/CTA";
+
 import styles from "./styles.module.css";
 
 initializeIcons(undefined, { disableWarning: true });
-
-const features = [
-  {
-    title: "Less time formatting",
-    imageUrl: "img/formatting.svg",
-    description: (
-      <>
-        You spend hours and hours tweaking charts to look just right. Get that
-        time back to work on what really matters.
-      </>
-    ),
-  },
-  {
-    title: "No need to leave Excel",
-    imageUrl: "img/excel.svg",
-    description: <>Keep working in the application you already know.</>,
-  },
-  {
-    title: "Automated insights",
-    imageUrl: "img/insights.svg",
-    description: (
-      <>
-        Access to suggestions based on leading authorities in the data
-        vizualization world.
-      </>
-    ),
-  },
-];
-
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl);
-
-  return (
-    <div className={classnames("col col--4", styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
-        </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  );
-}
 
 function Home() {
   const context = useDocusaurusContext();
@@ -73,17 +32,19 @@ function Home() {
           <BenefitItem
             image={<img src="img/formatting.svg" alt="formatting" />}
             title="Less time formatting"
-            desc="Whenever you write a story you get a handy visual spec. Quickly browse stories to make sure your UI looks right."
+            desc="You spend hours and hours tweaking charts to look just right. Get that
+            time back to work on what really matters."
           />
           <BenefitItem
             image={<img src="img/excel.svg" alt="Excel" />}
             title="No need to leave Excel"
-            desc="Get code snapshot tests out of the box with Storyshots, an official addon."
+            desc="Keep working in the application you already know."
           />
           <BenefitItem
             image={<img src="img/insights.svg" alt="insights" />}
             title="Automated insights"
-            desc="Reuse stories in your unit tests to confirm nuanced functionality."
+            desc="Access to suggestions based on leading authorities in the data
+            vizualization world."
           />
           <BenefitItem
             image={
@@ -94,6 +55,21 @@ function Home() {
           />
         </BenefitList>
       </div>
+      <CTA
+        text={
+          <span>
+            Remarkable Charts is quick to install and it’s easy to get started.
+          </span>
+        }
+        action={
+          <Link
+            className={classnames("button button--primary", styles.button)}
+            to={useBaseUrl("docs/installing")}
+          >
+            Get started
+          </Link>
+        }
+      />
     </Layout>
   );
 }

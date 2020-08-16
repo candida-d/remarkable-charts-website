@@ -33,7 +33,7 @@ function Pricing() {
                 <span className={styles.numeral}>Free</span>
               </div>
               <div className={styles.planDesc}>
-                Create basic charts and view any chart made by a colleague
+                Create basic charts. View any chart made by a colleague
               </div>
               <div className={styles.action}>
                 <Link
@@ -55,6 +55,14 @@ function Pricing() {
                 <li className={styles.detail}>
                   <CheckIcon className={styles.checkIcon} />
                   Create bar and column charts
+                </li>
+                <li className={styles.detail}>
+                  <CheckIcon className={styles.checkIcon} />
+                  View any chart
+                </li>
+                <li className={styles.detail}>
+                  <CheckIcon className={styles.checkIcon} />
+                  Export to multiple formats
                 </li>
                 <li className={styles.detail}>
                   <CheckIcon className={styles.checkIcon} />
@@ -92,7 +100,8 @@ function Pricing() {
                 Try for free
               </Link>
               <ul className={styles.pricingPlanDetails}>
-                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>Create all chart types</li>
+                <li className={styles.detail}>Technical support</li>
                 <li className={styles.detail}>+ Core features</li>
               </ul>
             </div>
@@ -103,18 +112,20 @@ function Pricing() {
               <div className={styles.price}>
                 <span className={styles.numeral}>Custom</span>
               </div>
-              <div className={styles.planDesc}>Team and site licenses</div>
+              <div className={styles.planDesc}>Teams</div>
               <Link
                 className={classnames(
                   "button button--outline button--primary",
                   styles.trialButton
                 )}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("contact")}
               >
                 Chat with us
               </Link>
               <ul className={styles.pricingPlanDetails}>
-                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>Site licensing</li>
+                <li className={styles.detail}>Create all chart types</li>
+                <li className={styles.detail}>Technical support</li>
                 <li className={styles.detail}>+ Core features</li>
               </ul>
             </div>
@@ -131,12 +142,14 @@ function Pricing() {
                   "button button--outline button--primary",
                   styles.trialButton
                 )}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("contact")}
               >
                 Chat with us
               </Link>
               <ul className={styles.pricingPlanDetails}>
-                <li className={styles.detail}>Chrome</li>
+                <li className={styles.detail}>
+                  Let us create a new chart type for your specific use case
+                </li>
                 <li className={styles.detail}>+ Core features</li>
               </ul>
             </div>

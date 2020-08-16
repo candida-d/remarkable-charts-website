@@ -1,5 +1,3 @@
-const path = require("path");
-
 module.exports = {
   title: "Remarkable Charts",
   tagline: "Create beautiful charts in seconds with Excel",

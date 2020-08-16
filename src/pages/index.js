@@ -6,6 +6,8 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import { initializeIcons } from "@uifabric/icons";
 import { Hero } from "../components/Hero";
 import { ValueProp } from "../components/ValueProp";
+import { BenefitItem } from "../components/BenefitItem";
+import { BenefitList } from "../components/BenefitList";
 import styles from "./styles.module.css";
 
 initializeIcons(undefined, { disableWarning: true });
@@ -64,21 +66,34 @@ function Home() {
       description="Create beautiful charts in seconds with Excel"
     >
       <Hero tagline={siteConfig.tagline} />
-      <hr className={styles.separator} />
-      <ValueProp />
-      <main>
-        {features && features.length && (
-          <section className={classnames("text--center", styles.features)}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
+      <div className={styles.contrast}>
+        <hr className={styles.separator} />
+        <ValueProp />
+        <BenefitList>
+          <BenefitItem
+            image={<img src="img/formatting.svg" alt="formatting" />}
+            title="Less time formatting"
+            desc="Whenever you write a story you get a handy visual spec. Quickly browse stories to make sure your UI looks right."
+          />
+          <BenefitItem
+            image={<img src="img/excel.svg" alt="Excel" />}
+            title="No need to leave Excel"
+            desc="Get code snapshot tests out of the box with Storyshots, an official addon."
+          />
+          <BenefitItem
+            image={<img src="img/insights.svg" alt="insights" />}
+            title="Automated insights"
+            desc="Reuse stories in your unit tests to confirm nuanced functionality."
+          />
+          <BenefitItem
+            image={
+              <img src="img/formatting.svg" alt="visual regression test" />
+            }
+            title="Use everywhere"
+            desc="Export as png, jpg, svg or pdf."
+          />
+        </BenefitList>
+      </div>
     </Layout>
   );
 }

@@ -13,6 +13,28 @@ function About() {
           <h1>Welcome</h1>
           <p>Create great looking charts and data visualizations</p>
         </div>
+        <div class="avatar margin-vert--md">
+          <a
+            class="avatar__photo-link avatar__photo avatar__photo--lg"
+            href="https://www.linkedin.com/in/johnwalley"
+          >
+            <img alt="John Walley Profile" src="/img/profile-pic.jpg" />
+          </a>
+          <div class="avatar__intro">
+            <h4 class="avatar__name">
+              <a
+                href="https://www.linkedin.com/in/johnwalley"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                John Walley
+              </a>
+            </h4>
+            <small class="avatar__subtitle">
+              CEO @ Mulberry House Software
+            </small>
+          </div>
+        </div>
         <div className="text">
           <div className="col">
             <p>

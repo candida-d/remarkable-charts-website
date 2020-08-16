@@ -48,6 +48,7 @@
   }
 
   .meta {
+    padding-right: 10%;
     margin-bottom: 0;
     order: 1;
     flex: 1;

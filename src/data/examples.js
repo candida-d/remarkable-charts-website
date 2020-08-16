@@ -17,7 +17,6 @@ const examples = [
     title: "Bar chart",
     description: "The Amazon in Brazil is on fire - how bad is it?",
     dataset: "fires",
-    preview: require("./showcase/forest-fires.png"),
     website: "/showcase",
     source: "https://1drv.ms/x/s!AsHTN9MDEVo1oDHgnnCd2o0GTg8o?e=ovbuMi",
     pinned: false,
@@ -25,7 +24,6 @@ const examples = [
   {
     title: "Bar chart",
     description: "Hamilton closing in on Schumacher",
-    preview: require("./showcase/vaping.png"),
     dataset: "formula1",
     website: "/showcase",
     source: "https://1drv.ms/x/s!AsHTN9MDEVo1oDHgnnCd2o0GTg8o?e=ovbuMi",
@@ -33,8 +31,7 @@ const examples = [
   },
   {
     title: "Area chart",
-    description: "Carboin emissions",
-    preview: require("./showcase/love-island.png"),
+    description: "Carboin em",
     dataset: "globalCo2Emissions",
     website: "/showcase",
     source: "https://1drv.ms/x/s!AsHTN9MDEVo1oDHgnnCd2o0GTg8o?e=ovbuMi",

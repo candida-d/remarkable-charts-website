@@ -6,6 +6,20 @@ import { Modal } from "@fluentui/react";
 import { Chart } from "../Chart";
 import styles from "./styles.module.css";
 
+const Chevron = () => (
+  <svg
+    viewBox="0 0 1024 1024"
+    width="20px"
+    height="20px"
+    className={styles.chevron}
+  >
+    <path
+      d="M768.072 514.022c0 10.236-3.904 20.47-11.712 28.282l-344.098 344.156c-15.62 15.624-40.946 15.624-56.568 0.006-15.622-15.622-15.624-40.948-0.006-56.568l315.82-315.876-315.868-315.922c-15.618-15.624-15.618-40.952 0.004-56.568 15.624-15.62 40.95-15.618 56.57 0.006l344.144 344.204c7.81 7.81 11.714 18.044 11.714 28.28z"
+      className={styles.chevron}
+    ></path>
+  </svg>
+);
+
 export function Hero({ tagline }) {
   const [showModal, setShowModal] = useState(false);
 
@@ -41,13 +55,69 @@ export function Hero({ tagline }) {
         <div className={styles.secondary}>
           <span className={styles.secondarySubheading}>Available for</span>
           <div className={styles.platformList}>
-            <div className={styles.platformItem}>Office on the web</div>
-            <div className={styles.platformItem}>Office on Windows</div>
-            <div className={styles.platformItem}>Office 2019 on Windows</div>
-            <div className={styles.platformItem}>Office 2016 on Windows</div>
-            <div className={styles.platformItem}>Office 2013 on Windows</div>
-            <div className={styles.platformItem}>Office on Mac</div>
-            <div className={styles.platformItem}>Office 2019 on Mac</div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/edge.png" alt="Office on the web" />
+                <span>Office on the web</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/windows.png" alt="Office on Windows" />
+                <span>Office on Windows</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/windows.png" alt="Office 2019 on Windows" />
+                <span>Office 2019 on Windows</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/windows.png" alt="Office 2016 on Windows" />
+                <span>Office 2016 on Windows</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/windows.png" alt="Office 2013 on Windows" />
+                <span>Office 2013 on Windows</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/macos.png" alt="Office on Mac" />
+                <span>Office on Mac</span>
+              </Link>
+            </div>
+            <div className={styles.platformItem}>
+              <Link
+                className={styles.platformLink}
+                to={useBaseUrl("docs/installing")}
+              >
+                <img src="/img/macos.png" alt="Office 2019 on Mac" />
+                <span>Office 2019 on Mac</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

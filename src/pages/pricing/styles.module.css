@@ -1,8 +1,3 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .pricingHeader {
   text-align: center;
   display: flex;
@@ -47,12 +42,27 @@
 }
 
 .planName {
-  color: rgb(55, 213, 211);
   display: block;
   letter-spacing: 0.35em;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 13px;
+}
+
+.planName.essential {
+  color: rgb(55, 213, 211);
+}
+
+.planName.standard {
+  color: rgb(102, 191, 60);
+}
+
+.planName.enterprise {
+  color: rgb(230, 157, 0);
+}
+
+.planName.bespoke {
+  color: rgb(30, 167, 253);
 }
 
 .price {

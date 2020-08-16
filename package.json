@@ -10,10 +10,7 @@
   "scripts": {
     "start": "docusaurus start",
     "build": "docusaurus build",
-    "swizzle": "docusaurus swizzle",
-    "deploy": "cross-env DEBUG=* netlify deploy --prod",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "deploy": "cross-env DEBUG=* netlify deploy --prod"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.61",

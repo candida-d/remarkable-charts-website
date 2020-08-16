@@ -26,7 +26,7 @@ function Privacy() {
               example: Excel version, platform.
             </p>
             <p>
-              A user may explicitly turn on telemetry. This will send data
+              A user may explicitly turn on telemetry. This will send data to
               Mulberry House Software services. This may include the data used
               to produce a chart as well as information about your environment.
               In addition, the telemetry may send data about your usage of

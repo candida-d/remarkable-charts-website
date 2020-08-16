@@ -3,7 +3,7 @@ id: storytelling-and-spreadsheets
 title: "Storytelling and spreadsheets"
 author: John Walley
 author_title: CEO @ Mulberry House Software
-author_url: https://github.com/johnwalley
+author_url: https://www.linkedin.com/in/johnwalley
 author_image_url: /img/profile-pic.jpg
 tags: [storytelling, spreadsheets]
 draft: true

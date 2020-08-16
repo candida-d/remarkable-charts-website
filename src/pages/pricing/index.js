@@ -25,7 +25,9 @@ function Pricing() {
         <div className={styles.planWrapper}>
           <div className={styles.planInner}>
             <div className={styles.planPrice}>
-              <span className={styles.planName}>Essentials</span>
+              <span className={classnames(styles.planName, styles.essential)}>
+                Essentials
+              </span>
               <div className={styles.price}>
                 <span className={styles.numeral}>Free</span>
               </div>
@@ -69,7 +71,9 @@ function Pricing() {
           </div>
           <div className={styles.schedule}>
             <div className={styles.plan}>
-              <span className={styles.planName}>Standard</span>
+              <span className={classnames(styles.planName, styles.standard)}>
+                Standard
+              </span>
               <div className={styles.price}>
                 <span className={styles.numeral}>$5</span>
                 <span className={styles.period}>/mo</span>
@@ -92,7 +96,9 @@ function Pricing() {
               </ul>
             </div>
             <div className={styles.plan}>
-              <span className={styles.planName}>Enterprise</span>
+              <span className={classnames(styles.planName, styles.enterprise)}>
+                Enterprise
+              </span>
               <div className={styles.price}>
                 <span className={styles.numeral}>Custom</span>
               </div>
@@ -112,7 +118,9 @@ function Pricing() {
               </ul>
             </div>
             <div className={styles.plan}>
-              <span className={styles.planName}>Bespoke</span>
+              <span className={classnames(styles.planName, styles.bespoke)}>
+                Bespoke
+              </span>
               <div className={styles.price}>
                 <span className={styles.numeral}>Custom</span>
               </div>

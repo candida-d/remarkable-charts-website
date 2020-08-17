@@ -17,7 +17,7 @@
     "@docusaurus/plugin-ideal-image": "2.0.0-alpha.61",
     "@docusaurus/preset-classic": "2.0.0-alpha.61",
     "@fluentui/react": "^7.128.1",
-    "@mulberryhousesoftware/remarkable-charts-ui": "^0.30.0",
+    "@mulberryhousesoftware/remarkable-charts-ui": "^0.31.3",
     "classnames": "2.2.6",
     "moment": "^2.27.0",
     "moment-msdate": "^2.0.4",

@@ -47,9 +47,7 @@ function Home() {
             vizualization world."
           />
           <BenefitItem
-            image={
-              <img src="img/formatting.svg" alt="visual regression test" />
-            }
+            image={<img src="img/export.svg" alt="export" />}
             title="Use everywhere"
             desc="Export as png, jpg, svg or pdf."
           />

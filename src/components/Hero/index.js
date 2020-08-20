@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import classnames from "classnames";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import { Modal } from "@fluentui/react";
+import {
+  Modal,
+  Coachmark,
+  DirectionalHint,
+  TeachingBubbleContent,
+  Text,
+} from "@fluentui/react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { Chart } from "../Chart";
 import styles from "./styles.module.css";
 
@@ -21,7 +28,14 @@ const Chevron = () => (
 );
 
 export function Hero({ tagline }) {
+  const target = useRef(null);
+  const [hideDialog, setHideDialog] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [isCoachmarkVisible, setIsCoachmarkVisible] = useState(true);
+  const [isCoachmarkDismissed, setIsCoachmarkDismissed] = useLocalStorage(
+    "isCoachmarkDismissed",
+    false
+  );
 
   return (
     <header className={styles.wrapper}>
@@ -48,8 +62,65 @@ export function Hero({ tagline }) {
       </div>
       <section className={styles.content}>
         <div className={styles.primary}>
-          <div className={styles.chartWrapper}>
-            <Chart />
+          <div className={styles.chartWrapper} ref={target}>
+            <Chart hideDialog={hideDialog} setHideDialog={setHideDialog} />
+            {isCoachmarkVisible && !isCoachmarkDismissed && (
+              <Coachmark
+                target={target.current}
+                positioningContainerProps={{
+                  directionalHint: DirectionalHint.topRightEdge,
+                  doNotLayer: false,
+                }}
+                ariaAlertText="A coachmark has appeared"
+                ariaDescribedBy="coachmark-desc1"
+                ariaLabelledBy="coachmark-label1"
+                ariaDescribedByText="Press enter or alt + C to open the coachmark notification"
+                ariaLabelledByText="Coachmark notification"
+              >
+                <TeachingBubbleContent
+                  headline="You can interact with this chart"
+                  hasCloseButton
+                  isWide={false}
+                  hasSmallHeadline={false}
+                  closeButtonAriaLabel="Close"
+                  primaryButtonProps={{
+                    text: "Maybe later",
+                    onClick: () => {
+                      setIsCoachmarkVisible(false);
+                      setIsCoachmarkDismissed(true);
+                    },
+                  }}
+                  secondaryButtonProps={{
+                    text: "Try it out",
+                    onClick: () => {
+                      setIsCoachmarkVisible(false);
+                      setIsCoachmarkDismissed(true);
+
+                      try {
+                        document
+                          .getElementsByClassName(
+                            "ms-Button ms-Button--icon ms-Button--hasMenu"
+                          )[0]
+                          .click();
+                      } catch (error) {
+                        console.warn("Could not open chart menu");
+                        console.error(error);
+                      }
+                    },
+                  }}
+                  onDismiss={() => setIsCoachmarkVisible(false)}
+                >
+                  <Text>
+                    <p>Use the menu at the top-right of the chart to:</p>
+                    <ul>
+                      <li>Edit the chart</li>
+                      <li>View sample data</li>
+                      <li>Download the chart</li>
+                    </ul>
+                  </Text>
+                </TeachingBubbleContent>
+              </Coachmark>
+            )}
           </div>
         </div>
         <div className={styles.secondary}>

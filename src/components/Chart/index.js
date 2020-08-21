@@ -85,7 +85,9 @@ function onSave({ layout, state }, type = "svg", platform = "OfficeOnline") {
   }
 }
 
-export function Chart({ newState, hideDialog = true, setHideDialog }) {
+export function Chart({ newState }) {
+  const [hideDialog, setHideDialog] = useState(true);
+
   const [state, dispatch] = useStateReducer(defaultReducer, {
     chart: newState,
   });

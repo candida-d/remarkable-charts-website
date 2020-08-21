@@ -29,7 +29,6 @@ const Chevron = () => (
 
 export function Hero({ tagline }) {
   const target = useRef(null);
-  const [hideDialog, setHideDialog] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [isCoachmarkVisible, setIsCoachmarkVisible] = useState(true);
   const [isCoachmarkDismissed, setIsCoachmarkDismissed] = useLocalStorage(
@@ -63,7 +62,7 @@ export function Hero({ tagline }) {
       <section className={styles.content}>
         <div className={styles.primary}>
           <div className={styles.chartWrapper} ref={target}>
-            <Chart hideDialog={hideDialog} setHideDialog={setHideDialog} />
+            <Chart />
             {isCoachmarkVisible && !isCoachmarkDismissed && (
               <Coachmark
                 target={target.current}

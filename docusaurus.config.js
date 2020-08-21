@@ -14,6 +14,11 @@ module.exports = {
     gtag: {
       trackingID: "UA-99053284-2",
     },
+    algolia: {
+      apiKey: "449572b27792f5cbdc34b71c32238e1d",
+      indexName: "remarkablecharts",
+      searchParameters: {}, // Optional (if provided by Algolia)
+    },
     navbar: {
       title: "Remarkable Charts",
       hideOnScroll: false, // enable when it is fixed

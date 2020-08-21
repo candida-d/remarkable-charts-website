@@ -33,7 +33,7 @@ When you enter some text into a cell such as **"2/2"**, Excel assumes that this 
 
 ## Millions and billions
 
-This requires you to [create a custom mumber format](https://support.office.com/en-us/article/create-a-custom-number-format-78f2a361-936b-4c03-8772-09fab54be7f4).
+This requires you to [create a custom number format](https://support.office.com/en-us/article/create-a-custom-number-format-78f2a361-936b-4c03-8772-09fab54be7f4).
 
 :::important Compatibility
 You **can't** create custom formats in Excel for the web but if you have the Excel desktop application, you can click the **Open in Excel** button to open the workbook and create them.

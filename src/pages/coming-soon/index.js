@@ -49,7 +49,7 @@ export default function GetAddin() {
         </div>
         <div>
           <form
-            name="contact"
+            name="coming-soon"
             method="post"
             action="/thanks/"
             data-netlify="true"
@@ -57,7 +57,7 @@ export default function GetAddin() {
             onSubmit={handleSubmit}
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="coming-soon" />
             <p hidden>
               <label>
                 Don’t fill this out:{" "}

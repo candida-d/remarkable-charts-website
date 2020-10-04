@@ -6,7 +6,7 @@ sidebar_label: Installing Remarkable Charts
 
 ## Install from Microsoft AppSource
 
-[Get Add-in for Free]()
+[Get Add-in for Free](/coming-soon)
 
 ## Install from Excel
 

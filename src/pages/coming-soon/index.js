@@ -10,7 +10,7 @@ function encode(data) {
     .join("&");
 }
 
-export default function Contact() {
+export default function GetAddin() {
   const [state, setState] = React.useState({});
 
   const history = useHistory();
@@ -35,10 +35,17 @@ export default function Contact() {
   };
 
   return (
-    <Layout title={`Contact`} description="Contact">
+    <Layout
+      title={`Coming soon`}
+      description="Remarkable Charts is currently in private beta. Sign up to get your invitation."
+    >
       <div className="container margin-vert--lg">
         <div className="text--center margin-bottom--lg">
-          <h1>Contact</h1>
+          <h1>Coming soon</h1>
+          <p>
+            Remarkable Charts is currently in private beta. Sign up to get your
+            invitation.
+          </p>
         </div>
         <div>
           <form
@@ -83,18 +90,8 @@ export default function Contact() {
               </small>
             </p>
             <p>
-              <label className={styles.label}>Message</label>
-              <br />
-              <textarea
-                className={styles.formControl}
-                name="message"
-                rows="5"
-                onChange={handleChange}
-              />
-            </p>
-            <p>
               <button className="button button--primary" type="submit">
-                Send
+                Sign up
               </button>
             </p>
           </form>

@@ -1,17 +1,16 @@
-import React from "react";
-import classnames from "classnames";
-import Layout from "@theme/Layout";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { initializeIcons } from "@uifabric/icons";
-import { Hero } from "../components/Hero";
-import { ValueProp } from "../components/ValueProp";
 import { BenefitItem } from "../components/BenefitItem";
 import { BenefitList } from "../components/BenefitList";
 import { CTA } from "../components/CTA";
-
+import { Hero } from "../components/Hero";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
+import React from "react";
+import { ValueProp } from "../components/ValueProp";
+import classnames from "classnames";
+import { initializeIcons } from "@uifabric/icons";
 import styles from "./styles.module.css";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 initializeIcons(undefined, { disableWarning: true });
 
@@ -62,7 +61,7 @@ function Home() {
         action={
           <Link
             className={classnames("button button--primary", styles.button)}
-            to={useBaseUrl("docs/installing")}
+            to={useBaseUrl("coming-soon")}
           >
             Get started
           </Link>

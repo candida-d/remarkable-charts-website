@@ -1,10 +1,10 @@
-import React from "react";
-import classnames from "classnames";
+import { CTA } from "../../components/CTA";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import { CTA } from "../../components/CTA";
+import React from "react";
+import classnames from "classnames";
 import styles from "./styles.module.css";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const CheckIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 1024 1024" width="20px" height="20px">
@@ -41,7 +41,7 @@ function Pricing() {
                     "button button--primary",
                     styles.trialButton
                   )}
-                  to={useBaseUrl("docs/installing")}
+                  to={useBaseUrl("coming-soon")}
                 >
                   Get started now
                 </Link>
@@ -95,7 +95,7 @@ function Pricing() {
                   "button button--primary",
                   styles.trialButton
                 )}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 Try for free
               </Link>
@@ -165,7 +165,7 @@ function Pricing() {
         action={
           <Link
             className={classnames("button button--primary", styles.button)}
-            to={useBaseUrl("docs/installing")}
+            to={useBaseUrl("coming-soon")}
           >
             Get started
           </Link>

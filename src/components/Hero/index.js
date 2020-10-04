@@ -1,17 +1,18 @@
-import React, { useRef, useState } from "react";
-import classnames from "classnames";
-import Link from "@docusaurus/Link";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import {
-  Modal,
   Coachmark,
   DirectionalHint,
+  Modal,
   TeachingBubbleContent,
   Text,
 } from "@fluentui/react";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
+import React, { useRef, useState } from "react";
+
 import { Chart } from "../Chart";
+import Link from "@docusaurus/Link";
+import classnames from "classnames";
 import styles from "./styles.module.css";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const Chevron = () => (
   <svg
@@ -47,7 +48,7 @@ export function Hero({ tagline }) {
         <div className={styles.pitchActions}>
           <Link
             className={classnames("button button--primary", styles.button)}
-            to={useBaseUrl("docs/installing")}
+            to={useBaseUrl("coming-soon")}
           >
             Get started
           </Link>
@@ -128,7 +129,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/edge.png" alt="Office on the web" />
                 <span>Office on the web</span>
@@ -137,7 +138,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/windows.png" alt="Office on Windows" />
                 <span>Office on Windows</span>
@@ -146,7 +147,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/windows.png" alt="Office 2019 on Windows" />
                 <span>Office 2019 on Windows</span>
@@ -155,7 +156,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/windows.png" alt="Office 2016 on Windows" />
                 <span>Office 2016 on Windows</span>
@@ -164,7 +165,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/windows.png" alt="Office 2013 on Windows" />
                 <span>Office 2013 on Windows</span>
@@ -173,7 +174,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/macos.png" alt="Office on Mac" />
                 <span>Office on Mac</span>
@@ -182,7 +183,7 @@ export function Hero({ tagline }) {
             <div className={styles.platformItem}>
               <Link
                 className={styles.platformLink}
-                to={useBaseUrl("docs/installing")}
+                to={useBaseUrl("coming-soon")}
               >
                 <img src="/img/macos.png" alt="Office 2019 on Mac" />
                 <span>Office 2019 on Mac</span>

@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { Modal } from "@fluentui/react";
 import {
-  Chart as RemarkableChart,
   Content,
   Edit,
+  Chart as RemarkableChart,
   StateDispatch,
   defaultReducer,
-  useStateReducer,
   savePngToFile,
   saveSvgToFile,
+  useStateReducer,
 } from "@mulberryhousesoftware/remarkable-charts-ui";
+import React, { useState } from "react";
+
+import { Modal } from "@fluentui/react";
 import NoSsr from "../NoSsr";
 import styles from "./styles.module.css";
 

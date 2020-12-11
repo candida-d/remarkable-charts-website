@@ -212,9 +212,9 @@ export function Hero({ tagline }) {
           <iframe
             width="100%"
             src="https://www.youtube.com/embed/qOPbGnmBTSI"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </div>
       </Modal>

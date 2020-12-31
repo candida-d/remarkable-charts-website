@@ -14,8 +14,6 @@ Let's take a look at a chart featured in the article and reproduce it with Remar
 
 ## Where does our food come from?
 
-This chart looks at the how people are getting about. It uses the number of requests for directions as a proxy for activity.
-
 ![](/img/blog/where-does-our-food-come-from.png)
 ![](/img/blog/remarkable-chart-where-does-our-food-come-from-1.png)
 

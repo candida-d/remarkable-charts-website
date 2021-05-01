@@ -15,7 +15,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.61",
     "@docusaurus/plugin-ideal-image": "2.0.0-alpha.61",
-    "@docusaurus/preset-classic": "2.0.0-alpha.61",
+    "@docusaurus/preset-classic": "2.0.0-alpha.75",
     "@fluentui/react": "^7.154.0",
     "@mulberryhousesoftware/remarkable-charts-ui": "^0.35.3",
     "classnames": "2.2.6",

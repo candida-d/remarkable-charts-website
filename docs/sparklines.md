@@ -9,6 +9,6 @@ A sparkline is a tiny chart that provides a simple overview of data. Use sparkli
 
 Resize the chart to make it smaller. That's all
 
-## Anythng else I should know?
+## Anything else I should know?
 
 Sparklines can only show a single data series. If you have more than one series (column) then we only show the first.
